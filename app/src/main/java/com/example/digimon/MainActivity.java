@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.digimon.connectors.RetrofitInstance;
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<DigimonModel>> call, Throwable t) {
-
+                Log.e("API","Failure"+t.getLocalizedMessage());
             }
         });
 
